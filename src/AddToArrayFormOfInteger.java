@@ -97,6 +97,7 @@ public class AddToArrayFormOfInteger {
         if (carry != 0) {
             list.add(carry);
         }
+        Collections.reverse(list);
         return list;
     }
 }
