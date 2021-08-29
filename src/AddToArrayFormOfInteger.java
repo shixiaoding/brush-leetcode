@@ -2,7 +2,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-//Java：数组形式的整数加法
+
+/**
+ * @author shiding
+ * 数组形式的整数加法
+ */
 public class AddToArrayFormOfInteger {
     public static void main(String[] args) {
         int[] num = {1, 2, 0, 0};
