@@ -59,7 +59,6 @@ public class ReverseWordsInAStringIii {
         return strBuilder.toString();
     }
 
-
     /**
      * 双指针 + 原地替换
      * 通过双指针 确认单词范围
@@ -80,6 +79,12 @@ public class ReverseWordsInAStringIii {
         return new String(chars);
     }
 
+    /**
+     * 字符反转
+     * @param left
+     * @param right
+     * @param arrays
+     */
     public static void reverse(int left, int right, char[] arrays) {
         while (left < right) {
             char temp = arrays[right];
