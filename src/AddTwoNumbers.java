@@ -6,7 +6,15 @@ public class AddTwoNumbers {
 
     public static void main(String[] args) {
 
+        ListNode listNode1 = new ListNode(2, new ListNode(4, new ListNode(3, null)));
+        ListNode listNode2 = new ListNode(5, new ListNode(6, new ListNode(7, null)));
+        ListNode listNode = addTwoNumbersThree(listNode1, listNode2);
+
+        printLinkList(listNode);
     }
+
+
+
 
     /**
      * 1、l1,l2 执行相同的步骤：
@@ -15,7 +23,7 @@ public class AddTwoNumbers {
      * 3、转换成 String数组
      * 4、循环遍历 String数组 逆序 输出新的链表
      */
-    public ListNode addTwoNumbersOne(ListNode l1, ListNode l2) {
+    public static ListNode addTwoNumbersOne(ListNode l1, ListNode l2) {
         // 把链表转成数字
         long num1 = 0;
         // 位数：0代表个位，1代表十位，以此递增
@@ -59,7 +67,7 @@ public class AddTwoNumbers {
      * 2、两个整数相加
      * 3、使用 数学思维，对数取余，可获取每位的值，创建成新的链表
      */
-    public ListNode addTwoNumbersTwo(ListNode l1, ListNode l2) {
+    public static ListNode addTwoNumbersTwo(ListNode l1, ListNode l2) {
         long num1 = 0;
         int square1 = 0;
         while (l1 != null) {
@@ -101,7 +109,7 @@ public class AddTwoNumbers {
      *    1. 每位数 相加时，都要加一下进位数，以防有进位
      *    2. 链表 全部遍历完成后，判断是否还有进位，有进在尾部，追加进位数
      */
-    public ListNode addTwoNumbersThree(ListNode l1, ListNode l2) {
+    public static ListNode addTwoNumbersThree(ListNode l1, ListNode l2) {
         ListNode head = null, tail = null;
         int carry = 0;
         while (l1 != null || l2 != null) {
@@ -146,5 +154,13 @@ public class AddTwoNumbers {
             this.val = val;
             this.next = next;
         }
+    }
+
+    public static void printLinkList(ListNode temp) {
+        while (temp != null) {
+            System.out.print(temp.val + "，");
+            temp = temp.next;
+        }
+        System.out.println();
     }
 }
